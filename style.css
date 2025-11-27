@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #f0f6ff;
+}
+
+/* Main Container */
+.page-container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    font-size: 32px;
+    color: #0d3c8c;
+    font-weight: 700;
+}
+
+.header p {
+    color: #4e6ba9;
+    font-size: 15px;
+}
+
+/* Main Layout Grid */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    gap: 25px;
+}
+
+/* Auto responsive for mobile */
+@media(max-width: 900px){
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border-left: 6px solid #1c5cff;
+}
+
+.section-title {
+    font-size: 20px;
+    margin: 20px 0 10px;
+    color: #0d3c8c;
+    font-weight: 600;
+}
+
+/* Grid Layouts */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+
+.grid-1 {
+    display: grid;
+    margin-bottom: 10px;
+}
+
+/* Inputs */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #dce6ff;
+    background: #f8faff;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+/* Buttons */
+.btn {
+    margin-top: 10px;
+    width: 100%;
+    background: #1c5cff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn:hover {
+    background: #073fb9;
+}
+
+.print-btn {
+    margin-top: 20px;
+}
+
+/* Preview Box */
+.preview-box {
+    background: #f4f7ff;
+    border-radius: 12px;
+    padding: 15px;
+    border: 2px dashed #bfd0ff;
+    min-height: 300px;
+    font-size: 15px;
+    color: #0d3c8c;
+}
+
+.placeholder {
+    color: #8aa0c9;
+    text-align: center;
+    padding-top: 120px;
+}
+
+/* === A4 Prescription Preview === */
+.a4-prescription {
+    width: 21cm;
+    height: 29.7cm;
+    padding: 0;
+    margin: auto;
+    background: white;
+    position: relative;
+    border: 1px solid #d7d7d7;
+}
+
+.pres-info-row {
+    position: absolute;
+    top: 4.9cm;
+    left: 1cm;
+    right: 1cm;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.pres-body {
+    position: absolute;
+    top: 6cm;
+    left: 1cm;
+    bottom: 2cm;
+    display: flex;
+    gap: 20px;
+}
+
+/* LEFT COLUMN */
+.left-column {
+    width: 7.5cm;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.left-column .pres-row {
+    margin-bottom: 12px;
+}
+
+.left-column p {
+    margin-left: 5px;
+}
+
+/* RIGHT COLUMN */
+.right-column {
+    flex: 1;
+    padding-left: 0px;
+}
+
+.right-column h2 {
+    color: #0d3c8c;
+    margin-bottom: 5px;
+}
+
+.rx-box {
+    font-size: 16px;
+    line-height: 26px;
+    white-space: pre-line;
+}
+
+/* Doctor signature fixed at bottom right, 3.5cm from bottom */
+.doctor-signature {
+    position: absolute;
+    bottom: 3.5cm;   /* moved up from bottom */
+    right: 1cm; 
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+}
+

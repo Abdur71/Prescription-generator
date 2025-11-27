@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Prescription Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="page-container">
+
+    <header class="header">
+        <h1>🦷 Doctor Prescription Creator</h1>
+        <p>Professional Medical UI • Responsive • Print Ready</p>
+    </header>
+
+    <div class="main-grid">
+
+        <!-- Left : Input Form -->
+        <div class="form-section">
+
+            <div class="card">
+
+                <h2 class="section-title">Patient Information</h2>
+
+                <div class="grid-3">
+                    <div>
+                        <label>Patient Name</label>
+                        <input id="pname" type="text" placeholder="Enter patient's name">
+                    </div>
+                    <div>
+                        <label>Age</label>
+                        <input id="age" type="number" placeholder="Age">
+                    </div>
+                    <div>
+                        <label>Sex</label>
+                        <select id="sex">
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid-1">
+                    <div>
+                        <label>Date</label>
+                        <input id="date" type="date">
+                    </div>
+                </div>
+
+                <h2 class="section-title">Clinical Notes</h2>
+
+                <label>C/C:</label>
+                <textarea id="cc" placeholder="Chief Complaint"></textarea>
+
+                <label>O/E:</label>
+                <textarea id="oe" placeholder="On Examination"></textarea>
+
+                <label>M/H:</label>
+                <textarea id="mh" placeholder="Medical History"></textarea>
+
+                <label>Plan:</label>
+                <textarea id="plan" placeholder="Treatment plan"></textarea>
+
+                <label>Investigation:</label>
+                <textarea id="inv" placeholder="Investigations"></textarea>
+
+                <h2 class="section-title">Rx (Medicine)</h2>
+                <textarea id="rx" placeholder="Write medicine instructions"></textarea>
+
+                <button class="btn" onclick="generatePrescription()">Preview Prescription</button>
+
+            </div>
+
+        </div>
+
+        <!-- Right: Live Prescription Preview -->
+        <div class="preview-section">
+            <div class="card">
+                <h2 class="section-title">Prescription Preview</h2>
+
+                <div id="preview" class="preview-box">
+                    <p class="placeholder">Preview will appear here…</p>
+                </div>
+
+                <button class="btn print-btn" onclick="printPrescription()">Download / Print</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Hidden print layout -->
+<div id="print-area" style="display:none;"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
